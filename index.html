@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <link rel="stylesheet" href="/assets/uni.fc23c2ce.css">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>轻松排班</title>
+    <meta name="description" content="纯本地离线排班助手，无广告、无联网、保护隐私" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="轻松排班" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="轻松排班" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-d0tpVMJQ.png" />
+    <link rel="manifest" href="./static/pwa/manifest.webmanifest" />
+    <!--preload-links-->
+    <!--app-context-->
+    <script type="module" crossorigin src="/assets/index-GlGACq-D.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Bj5k17B_.css">
+  </head>
+  <body>
+    <div id="app"><!--app-html--></div>
+    <script>
+      (function() {
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('./sw.js')
+              .then(function(reg) {
+                console.log('[PWA] 离线缓存已启用');
+              })
+              .catch(function(err) {
+                console.warn('[PWA] 离线缓存未启用（本地打开属正常）：', err);
+              });
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
